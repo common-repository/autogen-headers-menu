@@ -1,0 +1,47 @@
+.top_link {
+	margin: 0;
+	font-size: small;
+}
+
+.autogen_ol_menu {
+}
+
+.autogen_ol_w {
+}
+
+BODY {
+    counter-reset: chapter2;
+}
+H2.autogen_menu:before {
+    content: counter(chapter2) ". " ;
+    counter-increment: chapter2;
+}
+H2.autogen_menu {
+    counter-reset: chapter3;
+}
+H3.autogen_menu:before {
+    content: counter(chapter2) "." counter(chapter3) " ";
+    counter-increment: chapter3;
+}
+H3.autogen_menu {
+    counter-reset: chapter4;
+}
+H4.autogen_menu:before {
+    content: counter(chapter2) "." counter(chapter3) "." counter(chapter4) " ";
+    counter-increment: chapter4;
+}
+H4.autogen_menu {
+    counter-reset: chapter5;
+}
+H5.autogen_menu:before {
+    content: counter(chapter2) "." counter(chapter3) "." counter(chapter4) "." counter(chapter5) " ";
+    counter-increment: chapter5;
+}
+H5.autogen_menu {
+    counter-reset: chapter6;
+}
+H6.autogen_menu:before {
+    content: counter(chapter2) "." counter(chapter3) "." counter(chapter4) "." counter(chapter5) "." counter(chapter6) " ";
+    counter-increment: chapter6;
+}
+/* if you have more then 5 nested items in your menu, you are doing something wrong... */
